@@ -65,3 +65,27 @@ def insertar_alumno(nombre, apellido, aprobado, nota):
     # Guardar los cambios y cerrar la conexión
     conn.commit()
     conn.close()
+
+def alumnos_desaprobados():
+    conn = sqlite3.connect('alumnos.db')
+    cur = conn.cursor()
+    
+    # Consultar alumnos desaprobados (aprobado == False)
+    cur.execute('SELECT * FROM alumnos WHERE aprobado = 0')
+    alumnos = cur.fetchall() 
+    
+    conn.close()
+    
+    return alumnos
+
+def alumnos_aprobados():
+    conn = sqlite3.connect('alumnos.db')
+    cur = conn.cursor()
+    
+    # Consultar alumnos desaprobados (aprobado == False)
+    cur.execute('SELECT * FROM alumnos WHERE aprobado = 1')
+    alumnos = cur.fetchall() 
+    
+    conn.close()
+    
+    return alumnos

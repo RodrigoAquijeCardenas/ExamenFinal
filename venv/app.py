@@ -47,6 +47,17 @@ def insertar_alumno():
 
     return render_template('insertar_alumno.html')
 
+@app.route('/alumnos_desaprobados')
+def alumnos_desaprobados_view():
+    alumnos = estudiante.alumnos_desaprobados()
+    return render_template('alumnos_desaprobados.html', alumnos=alumnos)
+
+
+@app.route('/alumnos_aprobados')
+def alumnos_aprobados_view():
+    alumnos = estudiante.alumnos_aprobados()
+    return render_template('alumnos_aprobados.html', alumnos=alumnos)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
