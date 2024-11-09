@@ -21,6 +21,9 @@ en el curso
  - Un API comercial por ejemplo, es una que usamos en mi trabajo que es una API de tipo Wen service, que es una web service que se conecta a la ERP de un cliente, el erp es oracle, que accede a unas tablas de la base de datos, para luego enviar informacion de las Ordenes de Compra, como nombre, monto , etc... a travez de su endpoint que nos deuvelve un json con todos los detalles, esto es procesado por nuestro propio web service de escucha, que extrae la informacion y actuliza nuestra propia base de datos 
 
 
-
+DESCARGA:
+INGRESAR A VENV
+ABRIR EL ARCHIVO APP.PY
+LA BASE DE DATOS ES SQLITE3, POR ENDE, NO SE NECESITA OTRO ENTORNO DE TRABAJOO
 
 
